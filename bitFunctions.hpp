@@ -7,12 +7,12 @@
 
 #include <math.h>
 #include <string>
-namespace bitmask {
+namespace bitFunctions {
     short int mask(const short int value,char from, char to ) {
         const short int mask = pow(2,to-from)-1;
         return (value >> from) & mask;
     }
-    short int makeBit(const std::string val)
+    short int makeBits(const std::string val)
     {
         unsigned short int ret;
         int l = val.length();
@@ -20,6 +20,16 @@ namespace bitmask {
             if(val.at((l-1)-i) == '1')
                 ret += pow(2,i);
         return ret;
+    }
+    void printBits(unsigned short int bits)
+    {
+        int i;
+        for(i=(sizeof(short int)*8)-1; i>=0; --i)
+            if(bits & (1u << i))
+                std::cout << ('1');
+            else
+                std::cout << ('0');
+        std::cout << std::endl;
     }
 }
 
