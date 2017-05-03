@@ -6,8 +6,11 @@
 void showbits(unsigned short int x)
 {
     int i;
-    for(i=(sizeof(short int)*8)-1; i>=0; i--)
-        (x&(1u<<i))?putchar('1'):putchar('0');
+    for(i=(sizeof(short int)*8)-1; i>=0; --i)
+        if(x&(1u<<i))
+            std::cout << ('1');
+        else
+            std::cout << ('0');
 
     std::cout << std::endl;
 }

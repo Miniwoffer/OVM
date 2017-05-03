@@ -21,10 +21,6 @@ namespace bitmask {
                 ret += pow(2,i);
         return ret;
     }
-    std::string makeString(const unsigned short int val)
-    {
-
-    }
 }
 
 #endif //OVM_BITMASKS_HPP
