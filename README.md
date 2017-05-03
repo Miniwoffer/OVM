@@ -1,4 +1,4 @@
-<div><img src ="logo.png" style="display:block; margin:auto;" /></div>
+<p align="middle"><img src ="logo.png" /></p>
 
 #### Odin's Virtual Machine
 ----
